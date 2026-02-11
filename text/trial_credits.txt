@@ -7,6 +7,14 @@ fg 0x000000 0 10
 music lazy_days_demo play 1 0.8
 
 middletext settimeout 6000
+middletext {"weight":700,"size":50}Archived by\n{default}Roger van der Weide
+
+middletext
+
+middletext {"weight":700,"size":50}Put back together by\n{default}Lily (ZesCrew2)
+
+middletext
+
 middletext {"weight":700,"size":50}Big's Big Fishing Adventure 3 Staff
 
 middletext
