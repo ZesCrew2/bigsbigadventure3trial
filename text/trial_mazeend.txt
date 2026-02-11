@@ -1,0 +1,52 @@
+[init]
+config time:250 textSpeed:0.5 textSpeedFast:4
+addmug big
+fg 0x000000 1 1
+bg ark_lostcolony 1 1
+
+middletext 13:58\nSomewhere still on the strange, albeit familiar, base...
+
+middletext
+
+config time:250
+fg 0x000000 0 250
+music something_goofy
+timer 1850
+
+setcolor 0x4830F0 0x4830F0
+setmugtextside LEFT
+open
+
+// BIG Text
+mugtext BIG THE CAT
+mug big STARTINVISIBLE TOVISIBLE STARTOUTLEFT TOINLEFT STARTDIRLEFT TODIRLEFT
+
+text {"name":"comicsans","weight":400}... I made it. Now how do I work this again?
+
+// NARRATOR Text
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+
+config time:250
+text ** Grabbing his trusty fishing pole, Big interacts with electronics the only way\nhe knows how: by slamming his constant accessory into the control panel.
+
+text ** Luckily, the transporter fires up.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Hold on, Froggy! I'm co--
+
+mug big STARTVISIBLE TOINVISIBLE
+fg 0x000000 1 250
+music something_goofy pause 0.25
+
+scene reset textEngine trial_ss_soniceggman

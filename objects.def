@@ -1,0 +1,10 @@
+[
+	{ "name" : "obj_hookObject", "src" : "js/obj/hookObject.min.js" },
+	{ "name" : "obj_fishObject", "src" : "js/obj/fishObject.min.js" },
+	{ "name" : "obj_fishingTextObject", "src" : "js/obj/fishingTextObject.min.js" },
+	
+	{ "name" : "obj_flappyPlayerObject", "src" : "js/obj/flappyPlayerObject.min.js" },
+	{ "name" : "obj_flappyPipeObject", "src" : "js/obj/flappyPipeObject.min.js" },
+	{ "name" : "obj_flappyFailureObject", "src" : "js/obj/flappyFailureObject.min.js" },
+	{ "name" : "obj_flappyTextObject", "src" : "js/obj/flappyTextObject.min.js" }
+]

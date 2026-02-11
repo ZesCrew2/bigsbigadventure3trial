@@ -1,0 +1,108 @@
+// Test Scene
+// Aww yeah, let's test things
+[init]
+// Initialise Textbox and add the mugshots we need
+config time:250 textSpeed:1 textSpeedFast:4
+addmug big
+addmug froggy
+
+// Set the background image and a colour, and put some text on-screen
+fg 0x000000 1 1
+bg emeraldhill 1 1
+middletext Some time last Tuesday, in Emerald Hill...
+
+middletext
+
+// Start the music
+fg 0x000000 0
+music something_goofy
+timer 1850
+
+// Open the textbox
+setcolor 0x4830F0 0x4830F0
+setmugtextside LEFT
+open
+
+// BIG THE CAT mugshot text and make Big appear
+mugtext BIG THE CAT
+mug big STARTINVISIBLE TOVISIBLE STARTCENTER TOINLEFT STARTDIRLEFT TODIRLEFT
+
+text {"name":"comicsans","size":32,"weight":400,"color":"0xFFFFFF"}.¶¶¶¶.¶¶¶¶.¶¶¶¶ Froggy¶¶¶¶.¶¶¶¶.¶¶¶¶¶¶¶¶?
+
+text {"name":"comicsans","size":32,"weight":400,"color":"0xFFFFFF"}Where are you,¶¶¶¶ Froggy¶¶¶¶.¶¶¶¶.¶¶¶¶¶¶¶¶?
+
+text
+
+// Fade Big away
+mugtext
+mug big STARTVISIBLE TO25PERCENT
+
+setcolor 0x00A000
+setmugtextside RIGHT
+
+// Show Froggy
+mugtext FROGGY
+mug froggy STARTINVISIBLE TOVISIBLE STARTCENTER TOINRIGHT STARTDIRRIGHT TODIRRIGHT
+
+text {"effect":"judder"}For gods sake{default},¶¶¶¶ leave me alone already,¶¶¶¶ you {"effect":"wibble"}huge {"color":"0x4830F0","effect":"wibble"}purple{default}{"effect":"wibble"} balloon!{default}\n¶¶¶¶¶¶¶¶¶¶¶¶I have important business to attend to!
+
+text
+
+// Fade away Froggy
+mugtext
+mug froggy STARTVISIBLE TO25PERCENT
+
+setcolor 0x4830F0
+setmugtextside LEFT
+
+// Back to Big
+mugtext BIG THE CAT
+mug big START25PERCENT TOVISIBLE
+
+/*
+Two choices here:
+	1 - Derp out Froggy, and return to debug menu
+	2 - Go Fishing, and.. er.. go fishing..
+*/
+choice text {"name":"comicsans","size":32,"weight":400,"color":"0xFFFFFF"}Uhhh.¶¶¶¶.¶¶¶¶.¶¶¶¶¶¶¶¶¶¶¶¶\n{"setpos":240}► "What're you talking about, buddy?"\n{"setpos":240}► "Let's go fishing!
+choice 0 froggy_ribbit
+choice 1 go_fish
+
+// DERP
+[froggy_ribbit]
+text {"name":"comicsans","size":32,"weight":400,"color":"0xFFFFFF"}What're you talking about,¶¶¶¶ buddy?
+
+text
+
+mugtext
+mug big STARTVISIBLE TO25PERCENT
+
+setcolor 0x00A000
+setmugtextside RIGHT
+
+mugtext FROGGY
+mug froggy START25PERCENT TOVISIBLE
+
+text {"effect":"judder"}NNnnnnnngghh¶¶¶¶.¶¶¶¶.¶¶¶¶.{default}¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶ I give up.¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶\nRibbit.
+
+music something_goofy stop volume 3
+text
+
+mugtext
+mug big START25PERCENT TOINVISIBLE STARTINLEFT TOOUTLEFT
+mug froggy TOVISIBLE TOINVISIBLE STARTINRIGHT TOOUTRIGHT
+
+close
+
+timer 2250
+
+scene debug
+
+// FIIIIISH
+[go_fish]
+text {"name":"comicsans","size":32,"weight":400,"color":"0xFFFFFF"}Let's go fishing!
+
+music something_goofy stop volume 3
+timer 3000
+
+scene fishing

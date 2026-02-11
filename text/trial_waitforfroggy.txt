@@ -1,0 +1,58 @@
+﻿[init]
+config time:250 textSpeed:0.5 textSpeedFast:4
+addmug big
+fg 0x000000 1 1
+bg ark_computer 1 1
+bg ark_computer_solitaire_png 1 1
+
+middletext 12:57\nBig's "Computer"
+
+middletext
+
+config time:1
+setcolor 0x4830F0 0x4830F0
+open
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big STARTVISIBLE TOVISIBLE STARTINLEFT TOINLEFT STARTDIRLEFT TODIRLEFT
+
+config time:250
+fg 0x000000 0 250
+music something_goofy resume 0.5
+
+text {"name":"comicsans","weight":400}Froggy?¶¶¶¶¶¶¶¶ Are you back yet?¶¶¶¶¶¶¶¶ You've been gone for hours¶¶¶¶.¶¶¶¶.¶¶¶¶.
+
+// NARRATOR Text
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+
+config time:250
+text ** However, no comforting ribbit arrives in reply.
+
+// BIG Text
+config time:1
+text
+mugtext BIG THE CAT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Oh no,¶¶¶¶ {"effect":"wibble"}my Pollywog Pal is missing!{default}¶¶¶¶¶¶¶¶{"name":"comicsans","weight":400} I need to go find him.¶¶¶¶¶¶¶¶ He must have gotten\nlost up here.
+
+text {"name":"comicsans","weight":400}He's supposed to help me finish this, and I don't know a thing about\nprogramming¶¶¶¶.¶¶¶¶.¶¶¶¶.
+
+bg ark_computer_solitaire_png 0 250
+text {"name":"comicsans","weight":400}Hold on,¶¶¶¶ Froggy!¶¶¶¶¶¶¶¶ I'm coming!
+
+text
+
+mugtext
+mug big STARTVISIBLE TOINVISIBLE STARTINLEFT TOOUTLEFT STARTDIRLEFT TODIRLEFT
+
+close
+music something_goofy stop volume 0.5
+
+fg 0x000000 1 250
+
+scene reset textEngine trial_exploreark

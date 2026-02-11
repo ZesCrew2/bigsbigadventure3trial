@@ -1,0 +1,14 @@
+[
+	{ "name" : "scene_debug", "src" : "js/scenes/debug.min.js" },
+	{ "name" : "scene_textEngineTest", "src" : "js/scenes/textEngineTest.min.js" },
+	{ "name" : "scene_fontTest", "src" : "js/scenes/fontTest.min.js" },
+
+	{ "name" : "scene_controls", "src" : "js/scenes/controls.min.js" },
+	{ "name" : "scene_soviSplash", "src" : "js/scenes/soviSplash.min.js" },
+	{ "name" : "scene_titleScreen", "src" : "js/scenes/titleScreen.min.js" },
+	{ "name" : "scene_textEngine", "src" : "js/scenes/textEngine.min.js" },
+	{ "name" : "scene_smsBios", "src" : "js/scenes/smsBios.min.js" },
+	{ "name" : "scene_snailMaze", "src" : "js/scenes/snailMaze.min.js" },	
+	{ "name" : "scene_fishing", "src" : "js/scenes/fishing.min.js" },	
+	{ "name" : "scene_flappyBig", "src" : "js/scenes/flappyBig.min.js" }
+]

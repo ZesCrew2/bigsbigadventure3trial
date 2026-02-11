@@ -1,0 +1,160 @@
+﻿[init]
+config time:250 textSpeed:0.5 textSpeedFast:4
+addmug big
+addmug froggy
+fg 0x000000 1 1
+bg ark_controlroom 1 1
+
+middletext March 31st\n10:22\nBig's "Computer"
+
+middletext
+
+fg 0x000000 0
+music something_goofy
+timer 1850
+save intro
+
+// Open Textbox as BIG
+setcolor 0x4830F0 0x4830F0
+setmugtextside LEFT
+open
+
+// BIG Text
+mugtext BIG THE CAT
+mug big STARTINVISIBLE TOVISIBLE STARTCENTER TOINLEFT STARTDIRLEFT TODIRLEFT
+
+text {"name":"comicsans","weight":400}My name is Big.¶¶¶¶¶¶¶¶ I am a cat.¶¶¶¶¶¶¶¶ I just love to relax and fish with my best friend,¶¶¶¶\nFroggy, ¶¶¶¶by my side.
+
+text {"name":"comicsans","weight":400}But I can't relax today.¶¶¶¶¶¶¶¶ I need to finish my game!¶¶¶¶¶¶¶¶ It's supposed to be out soon.
+
+// NARRATOR Text
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+
+config time:250
+text ** Big swings his fishing pole, smashing the keys on the control panel.
+
+// BIG Text
+config time:1
+text
+mugtext BIG THE CAT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}I can't wait until everyone gets to play it.¶¶¶¶¶¶¶¶ It's going to be the best game with\nmy name in the title.¶¶¶¶¶¶¶¶ Isn't that right, ¶¶¶¶Froggy?
+
+text
+
+mugtext
+mug big STARTVISIBLE TO50PERCENT
+
+// FROGGY Text
+setcolor 0x00A000
+setmugtextside RIGHT
+
+mugtext FROGGY
+mug froggy STARTINVISIBLE TOVISIBLE STARTCENTER TOINRIGHT STARTDIRRIGHT TODIRRIGHT
+
+text ???
+
+// BIG Text
+config time:1
+text
+mug froggy STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+setmugtextside LEFT
+mugtext BIG THE CAT
+
+config time:250
+text {"name":"comicsans","weight":400}I do like fishing better,¶¶¶¶¶¶¶¶ but I can't write that on the box.¶¶¶¶¶¶¶¶ Let's see how much\nI've got done...
+
+// NARRATOR Text
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+bg ark_controlroom 0 250
+bg ark_computer 1 250
+
+config time:250
+text ** Big sticks his fishing pole in the center console of the Eclipse Cannon\ncomputer...
+
+bg ark_computer_artwork_png 1 250
+
+// BIG Text
+config time:1
+text
+mugtext BIG THE CAT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}I look funny.¶¶¶¶¶¶¶¶ Maybe I need a splash of color.¶¶¶¶¶¶¶¶ How long do I have until it's out..?
+
+
+config time:250
+bg ark_computer_artwork_png 0 250
+bg ark_computer_channel_png 1 250
+
+config time:250
+// BIG Text
+config time:1
+text
+mugtext BIG THE CAT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}¶¶¶¶¶¶¶¶.¶¶¶¶¶¶¶¶.¶¶¶¶¶¶¶¶.¶¶¶¶¶¶¶¶ Uh oh...¶¶¶¶¶¶¶¶¶¶¶¶ {"effect":"judder"}It's supposed to come out tomorrow!
+
+text {"name":"comicsans","weight":400}Froggy, do you have any paint?
+
+// BIG Text
+config time:1
+text
+mug big STARTVISIBLE TO50PERCENT
+mug froggy START50PERCENT TOVISIBLE
+setcolor 0x00A000 0x00A000
+setmugtextside RIGHT
+mugtext FROGGY
+
+config time:250
+text ...
+
+mug froggy STARTVISIBLE TOINVISIBLE STARTINRIGHT TOOUTRIGHT
+text
+
+mugtext
+setcolor 0x202020
+
+// NARRATOR Text
+config time:1
+config time:250
+text ** Froggy hops away.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+mug big START50PERCENT TOVISIBLE
+text {"name":"comicsans","weight":400}Uhh¶¶¶¶.¶¶¶¶.¶¶¶¶.¶¶¶¶¶¶¶¶ Okay buddy,¶¶¶¶¶¶¶¶ I'll wait here.
+
+text
+music something_goofy pause 3
+
+timer 2750
+
+//Some time passes... fade out the BG, replace with solid screen
+fg 0x000000 1 250
+
+config time:1
+close
+mugtext
+mug big STARTINVISIBLE TOINVISIBLE
+
+scene reset textEngine trial_waitforfroggy

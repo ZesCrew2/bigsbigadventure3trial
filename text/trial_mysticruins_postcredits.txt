@@ -1,0 +1,40 @@
+﻿[init]
+config time:250 textSpeed:0.5 textSpeedFast:4
+addmug big
+fg 0x000000 1 1
+bg mysticruins_bigshouse 1 1
+
+fg 0x000000 0 1500
+music something_goofy
+timer 1850
+
+// Open Textbox as BIG
+setcolor 0x202020 0x202020
+setmugtextside LEFT
+open
+
+text ** Big the Cat sits up, scratching his chest as he yawns. The ambient noises of\nthe Mystic Ruins fills his ears.
+
+text
+
+setcolor 0x4830F0
+
+// BIG Text
+mugtext BIG THE CAT
+mug big STARTINVISIBLE TOVISIBLE STARTCENTER TOINLEFT STARTDIRLEFT TODIRLEFT
+
+text {"name":"comicsans","weight":400}My name is Big.¶¶¶¶¶¶¶¶ I am a cat.¶¶¶¶¶¶¶¶ And I just had the strangest dream.¶¶¶¶¶¶¶¶ I need to tell\nmy best friend, Froggy.
+
+text {"name":"comicsans","weight":400}.¶¶¶¶.¶¶¶¶.¶¶¶¶ Froggy?¶¶¶¶¶¶¶¶ .¶¶¶¶.¶¶¶¶.¶¶¶¶ Where are you¶¶¶¶.¶¶¶¶.¶¶¶¶?
+
+music something_goofy stop volume 5
+text
+
+mug big STARTVISIBLE TOINVISIBLE STARTINLEFT TOCENTER
+mugtext
+
+close
+
+fg 0x000000 1 3000
+
+scene comingSoon

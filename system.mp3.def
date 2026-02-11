@@ -1,0 +1,16 @@
+[
+	{ "name" : "engine_HAPIPair", "src" : "js/HAPIPair.class.min.js" },
+	{ "name" : "engine_HAPIColorPair", "src" : "js/HAPIColorPair.class.min.js" },
+	{ "name" : "engine_HAPIFont", "src" : "js/HAPIFont.class.min.js" },
+	{ "name" : "engine_HAPIOverlay", "src" : "js/HAPIOverlay.class.min.js" },
+	{ "name" : "engine_HAPIBackground", "src" : "js/HAPIBackground.class.min.js" },
+	{ "name" : "engine_HAPIAudio", "src" : "js/HAPIAudio.class.min.js" },
+	{ "name" : "engine_HAPIAudioLibrary", "src" : "js/HAPIAudioLibrary.mp3.class.min.js" },
+	{ "name" : "engine_HAPIText", "src" : "js/HAPIText.class.min.js" },
+	{ "name" : "engine_HAPITextImage", "src" : "js/HAPITextImage.class.min.js" },
+	{ "name" : "engine_HAPITextCentreImage", "src" : "js/HAPITextCentreImage.class.min.js" },
+	{ "name" : "engine_HAPITextbox", "src" : "js/HAPITextbox.class.min.js" },
+	{ "name" : "engine_HAPIMugshot", "src" : "js/HAPIMugshot.class.min.js" },
+	{ "name" : "engine_HAPITextEngine", "src" : "js/HAPITextEngine.class.min.js" },
+	{ "name" : "engine_HAPIMask", "src" : "js/HAPIMask.class.min.js" }
+]

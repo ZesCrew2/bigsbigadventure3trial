@@ -1,0 +1,1044 @@
+﻿[init]
+config time:250 textSpeed:0.5 textSpeedFast:4
+addmug big
+addmug guncrate
+addmug sonic
+addmug eggman
+fg 0x000000 1 1
+
+checkvar return_from_gameover return_from_gameover yes
+
+goto check_crate
+
+[return_from_gameover]
+bg ss_hotel2 1 1
+
+config time:1
+open
+
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman STARTVISIBLE TOVISIBLE STARTINRIGHT TOINRIGHT STARTDIRRIGHT TODIRRIGHT
+mug sonic START50PERCENT TO50PERCENT STARTCENTER TOCENTER STARTDIRLEFT TODIRLEFT
+mug big START50PERCENT TO50PERCENT STARTINLEFT TOINLEFT STARTDIRLEFT TODIRLEFT
+setcolor 0x606080 0x606080
+
+setvar return_from_gameover no
+
+fg 0x000000 0 250
+music something_goofy resume 0.5
+
+goto the_choice
+
+[check_crate]
+bg ss_hotel1 1 1
+
+middletext 13:59\nThe city
+
+middletext
+
+config time:1
+setcolor 0x4830F0 0x4830F0
+open
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big STARTVISIBLE TOVISIBLE STARTINLEFT TOINLEFT STARTDIRLEFT TODIRLEFT
+
+config time:250
+fg 0x000000 0 250
+music something_goofy resume 0.5
+save sonicEggman
+
+text {"name":"comicsans","weight":400}--ming!
+
+text {"name":"comicsans","weight":400}¶¶¶¶.¶¶¶¶.¶¶¶¶.
+
+text {"name":"comicsans","weight":400}My head feels funny. Where am I?
+
+// NARRATOR Text
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+
+config time:250
+mug guncrate STARTINVISIBLE TOVISIBLE STARTINRIGHT TOINRIGHT
+text ** Big spies a G.U.N. metallic crate.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+choice text {"name":"comicsans","weight":400}That crate is shiny.\n{"setpos":360}► "I wonder what's inside."\n{"setpos":360}► "I should leave it alone."
+choice 0 open_crate
+choice 1 ignore_crate
+
+[open_crate]
+text {"name":"comicsans","weight":400}I wonder what's inside.
+
+// NARRATOR Text
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+
+config time:250
+text ** With a swing of his fishing rod, Big the Cat smashes into the gleaming crate,\nbut nothing happens.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}I should try again. I'm strong.
+
+// NARRATOR Text
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+
+config time:250
+text ** He swings once more, but only the reverberating sound of the\nmaximum security device rings back.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Must need a better lure. I'll have to come back later.
+
+text
+mug guncrate STARTVISIBLE TOINVISIBLE
+mug big STARTVISIBLE TOINVISIBLE STARTINLEFT TOCENTER
+
+goto enter_sonic
+
+[ignore_crate]
+text {"name":"comicsans","weight":400}I should leave it alone. There might be something scary in there. Maybe I'll\nlook at it later.
+
+text
+mug guncrate STARTVISIBLE TOINVISIBLE
+mug big STARTVISIBLE TOINVISIBLE STARTINLEFT TOCENTER
+
+goto enter_sonic
+
+[enter_sonic]
+bg ss_hotel1 0 250
+bg ss_hotel2 1 250
+
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+
+config time:250
+text ** Once again, Big wanders into unfamiliar territory, looking for his Pollywog Pal.
+
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+mug big STARTINVISIBLE TOVISIBLE STARTOUTLEFT TOINLEFT STARTDIRLEFT TODIRLEFT
+text {"name":"comicsans","weight":400}Froggy? Where are you? *sniffs air* I'm trying to find you, but it's hard\nin this place...
+
+text
+
+mugtext
+mug big STARTVISIBLE TO50PERCENT
+
+setcolor 0x0030FF
+setmugtextside RIGHT
+
+mugtext SONIC THE HEDGEHOG
+mug sonic STARTINVISIBLE TOVISIBLE STARTINLEFT TOCENTER STARTDIRLEFT TODIRLEFT
+
+mug sonic STARTDIRLEFT TODIRRIGHT
+text Woah! Hey there Big, long time no see!
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Hello.
+
+// SONIC Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SONIC THE HEDGEHOG
+mug sonic START50PERCENT TOVISIBLE
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x0030FF 0x0030FF
+
+config time:250
+text What are you doing here? Let me guess, Froggy?
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Have you seen him?
+
+// SONIC Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SONIC THE HEDGEHOG
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x0030FF 0x0030FF
+
+config time:250
+mug sonic START50PERCENT TOVISIBLE STARTDIRRIGHT TODIRLEFT
+text Afraid not, Big. I'm looking for ol' Egghead. A little birdie told me he was\nstalking around here, up to no good.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Yeah. He's not too happy about my game.
+
+// SONIC Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SONIC THE HEDGEHOG
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x0030FF 0x0030FF
+
+config time:250
+mug sonic START50PERCENT TOVISIBLE STARTDIRLEFT TODIRRIGHT
+text Your game? You mean that LCD thing?
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}No, my fishing game. It's been top secret.
+
+// SONIC Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SONIC THE HEDGEHOG
+mug sonic START50PERCENT TOVISIBLE
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x0030FF 0x0030FF
+
+config time:250
+text Oh! .¶¶¶¶.¶¶¶¶.¶¶¶¶huh. Thought that was a running joke. And you know how much I like\nrunning.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+config time:250
+mug eggman STARTINVISIBLE TOVISIBLE STARTOUTRIGHT TOINRIGHT STARTDIRRIGHT TODIRRIGHT
+
+text A bit too much for my liking!
+
+// SONIC Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SONIC THE HEDGEHOG
+mug eggman STARTVISIBLE TO50PERCENT
+setcolor 0x0030FF 0x0030FF
+
+config time:250
+mug sonic START50PERCENT TOVISIBLE STARTDIRRIGHT TODIRLEFT
+text I knew I smelled a hardboiled egg nearby.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}*sniff sniff* You did?
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman START50PERCENT TOVISIBLE
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+config time:250
+text Silence, both of you! So, you reached out to Sonic for help, huh?\nIf anyone knows how to rush out a game, it's him!
+
+// SONIC Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SONIC THE HEDGEHOG
+mug sonic START50PERCENT TOVISIBLE
+mug eggman STARTVISIBLE TO50PERCENT
+setcolor 0x0030FF 0x0030FF
+
+config time:250
+text No need to get mad about how your only game wasn't even yours to begin with!
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman START50PERCENT TOVISIBLE
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+config time:250
+text Step aside, Sonic! This is between me and the cat. 
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug eggman STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+mug sonic STARTDIRLEFT TODIRRIGHT
+text {"name":"comicsans","weight":400}What did I do?
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman START50PERCENT TOVISIBLE
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+config time:250
+mug sonic STARTDIRRIGHT TODIRLEFT
+text Isn't it obvious? You were washed up before this even began! Spending time\non some fishing simulator when instead it should have gone to the building of\na brand new Eggmanland!
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug eggman STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+mug sonic STARTDIRLEFT TODIRRIGHT
+text {"name":"comicsans","weight":400}That's not very nice.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman START50PERCENT TOVISIBLE
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+config time:250
+mug sonic STARTDIRRIGHT TODIRLEFT
+text I'm known for being a gentleman. A scholar. A sprint runner.\nNowhere does it say that I need to be nice.
+
+// SONIC Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SONIC THE HEDGEHOG
+mug sonic START50PERCENT TOVISIBLE
+mug eggman STARTVISIBLE TO50PERCENT
+setcolor 0x0030FF 0x0030FF
+
+config time:250
+text A sprint runner? That's the funniest thing I've heard all day!
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman START50PERCENT TOVISIBLE
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+config time:250
+text You never question why you can't catch me when I run to my glorious\nEggman mechs? 
+
+// SONIC Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SONIC THE HEDGEHOG
+mug sonic START50PERCENT TOVISIBLE
+mug eggman STARTVISIBLE TO50PERCENT
+setcolor 0x0030FF 0x0030FF
+
+config time:250
+text I've heard enough. Step back, Big. I'm taking down this talking egg.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman START50PERCENT TOVISIBLE
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+config time:250
+text Another egg reference? Sonic, I thought you were better than that!
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug eggman STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+choice text Uhh...{"name":"comicsans","weight":400}\n{"setpos":360}► "Okay."\n{"setpos":360}► "I can help."
+choice 0 sonic_fights_robotnik 0 1 0 0
+choice 1 sonic_fights_robotnik_with_big_lockon_technology 0 1 1 1
+
+[sonic_fights_robotnik]
+text {"name":"comicsans","weight":400}Okay.
+
+// SONIC Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SONIC THE HEDGEHOG
+mug sonic START50PERCENT TOVISIBLE
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x0030FF 0x0030FF
+
+config time:250
+text Could always call you 'buttnik. Oldie but a goodie.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman START50PERCENT TOVISIBLE
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+config time:250
+text Ugh, so juvenile... Badniks, {"effect":"judder"}attack!
+
+// NARRATOR Text
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+music something_goofy pause
+music boss_battle
+
+config time:250
+mug eggman STARTVISIBLE TO50PERCENT
+text ** A grand battle happens. But in the end, Sonic comes out on top.
+
+goto fight_over
+
+[sonic_fights_robotnik_with_big_lockon_technology]
+text {"name":"comicsans","weight":400}I can help.
+
+// SONIC Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SONIC THE HEDGEHOG
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x0030FF 0x0030FF
+
+config time:250
+mug sonic START50PERCENT TOVISIBLE STARTDIRLEFT TODIRRIGHT
+text You sure, Big?
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}I'm always ready to help my friends.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman START50PERCENT TOVISIBLE
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+config time:250
+mug sonic STARTDIRRIGHT TODIRLEFT
+text Enough! Badniks, {"effect":"judder"}attack!
+
+// NARRATOR Text
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+music something_goofy pause 0.01
+music boss_battle
+
+config time:250
+mug eggman STARTVISIBLE TO50PERCENT
+text ** A grand battle happens. But in the end, Sonic and Big come out on top.
+
+goto fight_over
+
+[fight_over]
+music boss_battle stop volume 0.5
+music something_goofy resume 0.5
+
+// SONIC Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SONIC THE HEDGEHOG
+mug sonic START50PERCENT TOVISIBLE
+setcolor 0x0030FF 0x0030FF
+
+config time:250
+text Is that all you got, Eggman? I could go all night!
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman START50PERCENT TOVISIBLE
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+config time:250
+text That five dollar budget is really putting a cramp in my style.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug eggman STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}What?
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman START50PERCENT TOVISIBLE
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+config time:250
+text Oh, relax. Metal Sonic, can you read me?
+
+// SONIC Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SONIC THE HEDGEHOG
+mug sonic START50PERCENT TOVISIBLE
+mug eggman STARTVISIBLE TO50PERCENT
+setcolor 0x0030FF 0x0030FF
+
+config time:250
+text Again? Is that your go-to when things go wrong?\nYou know how many times I've knocked him down.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman START50PERCENT TOVISIBLE
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+config time:250
+text Not like it matters. Blast! My radio was damaged in the fight.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug eggman STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Yay!
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman START50PERCENT TOVISIBLE
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+config time:250
+text What are you cheering about? I know you're a lovable dolt,\nbut you can't expect this to work. 
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug eggman STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Hey! 
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman START50PERCENT TOVISIBLE
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+config time:250
+text Think about it logically. What did all those reviews for "Sonic Adventure" say?\nNear universal praise, except for one segment. You! There's a reason\nyou were nothing but cameos for the sequel!
+
+// SONIC Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SONIC THE HEDGEHOG
+mug sonic START50PERCENT TOVISIBLE
+mug eggman STARTVISIBLE TO50PERCENT
+setcolor 0x0030FF 0x0030FF
+
+config time:250
+text That's enough! Who do you think you are, anyway?
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman START50PERCENT TOVISIBLE
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+goto the_choice
+
+[the_choice]
+
+config time:250
+text I said this was between me and the cat. Big, I didn't kidnap your frog friend,\nbut I did see where he went. And the quickest way to get there is through\nthe labyrinth. 
+
+text So choose. Either jump down there and try to make something no one wants,\nor step aside and let the Eggman Empire flourish.
+
+// SONIC Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SONIC THE HEDGEHOG
+mug eggman STARTVISIBLE TO50PERCENT
+setcolor 0x0030FF 0x0030FF
+
+config time:250
+mug sonic START50PERCENT TOVISIBLE STARTDIRLEFT TODIRRIGHT
+text Don't let him mess with you, Big.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+choice text {"name":"comicsans","weight":400}The Labyrinth sounds scary.¶¶¶¶.¶¶¶¶.¶¶¶¶\n{"setpos":360}► ".¶¶¶¶.¶¶¶¶.¶¶¶¶ But I need to save Froggy."\n{"setpos":360}► "I could always fish later."
+choice 0 save_froggy 0 1 0 0
+choice 1 bad_ending 0 1 1 1
+
+[save_froggy]
+text {"name":"comicsans","weight":400}.¶¶¶¶.¶¶¶¶.¶¶¶¶ But I need to save Froggy.
+
+text {"name":"comicsans","weight":400}Hold on, Froggy! I'm coming! .¶¶¶¶.¶¶¶¶.¶¶¶¶ Again!
+
+music something_goofy pause 0.5
+fg 0x000000 0.5 500
+
+music hold_out_programmer
+middletext settimeout 8000
+middletext {"effect":"wibble","weight":500,"size":40}The programmer has a nap. Hold out! Programmer!
+
+music hold_out_programmer
+middletext
+
+music something_goofy resume 0.5
+fg 0x000000 0 500
+
+text {"name":"comicsans","weight":400}... Huh?
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman START50PERCENT TOVISIBLE
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+config time:250
+mug sonic STARTDIRRIGHT TODIRLEFT
+text Hohoho! Did you really think it was going to be that easy?!
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Froggy.¶¶¶¶.¶¶¶¶.¶¶¶¶
+
+// SONIC Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SONIC THE HEDGEHOG
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x0030FF 0x0030FF
+
+config time:250
+mug sonic START50PERCENT TOVISIBLE STARTDIRLEFT TODIRRIGHT
+text Don't sweat it, Big. You can't trust a word he says.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman START50PERCENT TOVISIBLE
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+config time:250
+text That's not true! I'm only lying 99 out of 100 times.
+
+// SONIC Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SONIC THE HEDGEHOG
+mug eggman STARTVISIBLE TO50PERCENT
+setcolor 0x0030FF 0x0030FF
+
+config time:250
+mug sonic START50PERCENT TOVISIBLE STARTDIRRIGHT TODIRLEFT
+text And that's the biggest lie of all.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman START50PERCENT TOVISIBLE
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+config time:250
+text Argh! You petulant rodent! I wasn't even trying to go after you this time!
+
+// SONIC Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SONIC THE HEDGEHOG
+mug sonic START50PERCENT TOVISIBLE
+mug eggman STARTVISIBLE TO50PERCENT
+setcolor 0x0030FF 0x0030FF
+
+config time:250
+text But when you go after my friends, you're going after me.\nThink you'd have learned that on South Island.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman START50PERCENT TOVISIBLE
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+config time:250
+text Fine! Let's go, one on one! My Eggmobile always has some new tricks\nup its sleeve!
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug eggman STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Do you need my help?
+
+// SONIC Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SONIC THE HEDGEHOG
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x0030FF 0x0030FF
+
+config time:250
+mug sonic START50PERCENT TOVISIBLE STARTDIRLEFT TODIRRIGHT
+text You've got bigger plans to finish. I heard they just opened a rail to the\nMystic Ruins. You should be able to get home in no time. I'll take\ncare of McNosehair so you can find Froggy.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Thank you.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+mug big STARTVISIBLE TO50PERCENT STARTDIRLEFT TODIRRIGHT
+
+mug big STARTINLEFT TOOUTLEFT
+mug sonic STARTDIRRIGHT TODIRLEFT
+text Sonic, your material really needs an update!
+
+// NARRATOR Text
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+
+config time:250
+music something_goofy pause 0.01
+music boss_battle
+mug eggman STARTVISIBLE TO50PERCENT
+text ** And so the two titans once again engage in combat as they have for the last\ntwenty five years, giving Big the chance to escape from the city and return\nto the one place he feels most at ease.
+
+mug sonic START50PERCENT TOINVISIBLE STARTCENTER TOINRIGHT
+mug eggman START50PERCENT TOINVISIBLE
+
+text
+
+close
+
+music boss_battle stop volume 0.5
+
+fg 0x000000 1 250
+
+scene reset textEngine trial_mysticruins
+
+
+[bad_ending]
+text {"name":"comicsans","weight":400}I could always fish later.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman START50PERCENT TOVISIBLE
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+config time:250
+mug sonic STARTDIRRIGHT TODIRLEFT
+text Haha! I knew you'd choose wisely.\nAbout time someone started listening to me.
+
+// SONIC Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SONIC THE HEDGEHOG
+mug eggman STARTVISIBLE TO50PERCENT
+setcolor 0x0030FF 0x0030FF
+
+config time:250
+mug sonic START50PERCENT TOVISIBLE STARTDIRLEFT TODIRRIGHT
+text What? Big, no! You're better than this.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}I'm hungry.¶¶¶¶.¶¶¶¶.¶¶¶¶
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug eggman START50PERCENT TOVISIBLE
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+config time:250
+mug sonic STARTDIRRIGHT TODIRLEFT
+text You should come back to my base. It's fully stocked. I went to the fresh\nfish market earlier, so we can have a grand cookout! 
+
+text And we can discuss the specifics of my game. Maybe I'll even let you\ndesign a few microtransactions! People will pay hundreds of dollars to\ncustomize my glorious mustache!
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug sonic STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Can we have a fishing minigame?
+
+music something_goofy pause 3
+fg 0x000000 1 3000
+
+config time:1
+text
+
+mugtext
+
+close
+
+mug big STARTINVISIBLE TOINVISIBLE
+mug sonic STARTINVISIBLE TOINVISIBLE
+mug eggman STARTINVISIBLE TOINVISIBLE
+
+config time:250
+bg ss_hotel2 0 1
+bg 0x000000 1 1
+
+fg 0x000000 0 10
+
+music fishmiss play 0.8 1
+middletext settimeout 5000
+middletext {"size":40,"weight":700}GAME OVER 
+
+setcolor 0x202020 0x202020
+open
+
+choice text What? A bad ending in a trial version?! You didn't even get to fish!\nIs this really how you want things to end?\n{"setpos":360}► "Of course not!"\n{"setpos":360}► "Indeed. I'm Dr. Eggman."
+choice 0 undo_game_over 0 1 0 0
+choice 1 game_over 0 1 1 1
+
+[undo_game_over]
+text
+
+close
+
+middletext
+
+setvar return_from_gameover yes
+
+scene reset textEngine trial_ss_soniceggman
+
+[game_over]
+text
+
+close
+
+config time:3000
+middletext
+music something_goofy stop
+
+scene soviSplash

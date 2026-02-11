@@ -1,0 +1,33 @@
+﻿[init]
+config time:250 textSpeed:0.5 textSpeedFast:4
+addmug big
+fg 0x000000 1 1
+bg mysticruins_river 1 1
+
+middletext 14:45\nMystic Ruins riverbed
+
+middletext
+
+fg 0x000000 0
+music mystic_ruins
+save mysticRuins
+
+// Open Textbox as BIG
+setcolor 0x4830F0 0x4830F0
+setmugtextside RIGHT
+open
+
+// BIG Text
+mugtext BIG THE CAT
+mug big STARTINVISIBLE TOVISIBLE STARTOUTRIGHT TOINRIGHT STARTDIRRIGHT TODIRRIGHT
+
+text {"name":"comicsans","weight":400}Froggy? Where are¶¶¶¶.¶¶¶¶.¶¶¶¶.¶¶¶¶ Oh! I see you! I better fish you out.\nI've been waiting too long...
+
+text
+
+mugtext
+mug big STARTVISIBLE TOINVISIBLE
+
+close
+
+scene reset fishing

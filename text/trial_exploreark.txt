@@ -1,0 +1,762 @@
+﻿[init]
+config time:250 textSpeed:0.5 textSpeedFast:4
+addmug big
+addmug eggman_silhouette
+addmug eggman
+fg 0x000000 1 1
+bg ark_eternalengine1 1 1
+
+middletext settimeout 15000
+middletext And so Big begins his perilous journey through the hidden sectors of\nthis strange, albeit familiar base floating above the sky.\n\nNo matter where he sticks his head, regardless of what stagnant pools\nof water he allows his lure to bob in, Big comes up unsuccessful in his\nsearch for his greatest friend. 
+
+middletext
+
+fg 0x000000 0
+music lost_colony
+save exploreArk
+
+setcolor 0x4830F0
+setmugtextside LEFT
+
+open
+
+mugtext BIG THE CAT
+mug big STARTINVISIBLE TOVISIBLE STARTOUTLEFT TOINLEFT STARTDIRLEFT TODIRLEFT
+
+text {"name":"comicsans","weight":400}Froggy? Where are youuuu?
+
+mug big STARTDIRLEFT TODIRRIGHT
+text {"name":"comicsans","weight":400}I've been looking everywhere, but I have no idea where he went. He didn't even\nleave a note this time. I hope he's okay...
+
+text
+
+mug big STARTVISIBLE TO50PERCENT
+mugtext
+
+// EGGMAN TEXT
+setcolor 0x606080
+setmugtextside RIGHT
+
+mugtext ???
+mug eggman_silhouette STARTINVISIBLE TOVISIBLE STARTOUTRIGHT TOINRIGHT STARTDIRRIGHT TODIRRIGHT
+
+text Don't tell me you're looking for that frog again!
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+setcolor 0x4830F0 0x4830F0
+
+config time:100
+mug big START50PERCENT TOVISIBLE STARTDIRRIGHT TODIRLEFT
+text {"name":"comicsans","weight":400}Huh..?
+
+config time:250
+text
+
+mug eggman STARTINVISIBLE TOVISIBLE STARTINRIGHT TOINRIGHT STARTDIRRIGHT TODIRRIGHT
+mug eggman_silhouette STARTVISIBLE TOINVISIBLE STARTINRIGHT TOINRIGHT STARTDIRRIGHT TODIRRIGHT
+
+text {"name":"comicsans","weight":400}Oh, hello.
+
+text
+
+mugtext
+mug big STARTVISIBLE TO50PERCENT
+
+setcolor 0x606080
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+
+text Are you sure you're even friends? Seems to me he's constantly trying to\nescape from you!
+
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Hey! Me and him have been friends for years! 
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text In my experience, you can't trust anyone! Not even those you've programmed. 
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+choice text {"name":"comicsans","weight":400}Uhh...\n{"setpos":360}► "Have you seen Froggy?"\n{"setpos":360}► "Why are you so angry?"
+choice 0 seen_froggy 0 1 0 0
+choice 1 why_so_angry 0 1 1 1
+
+[seen_froggy]
+text {"name":"comicsans","weight":400}Have you seen Froggy?
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text Of course I haven't seen that amphibious creature. What interest would I have\nin kidnapping a frog?
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}You did it before.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text Those were far different circumstances! I know better than to mess with forces\nI can't control. After Perfect Chaos, the Biolizard... what else was there...?
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}I just want to find my friend. He's supposed to help me make a game.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text ... a game..? What sort of game?
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}About Froggy and me.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text What?! You mean to tell me¶¶¶¶.¶¶¶¶.¶¶¶¶.¶¶¶¶ I thought it was a joke! Haha, this is far too rich!
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}I know. Everyone loves to fish.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text What..? No way! I can't believe this was ever approved!
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}People liked my last game.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text Are you talking about that LCD game?
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Yeah. "Big's Fishing."
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text That barely counts! Who even remembers it?
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}I don't think you got a game like that.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text I¶¶¶¶¶¶¶¶.¶¶¶¶¶¶¶¶.¶¶¶¶¶¶¶¶.¶¶¶¶¶¶¶¶ listen here! I don't need any kid's meal game to justify my plans for world\ndomination! Those bigwigs think they can make a spin-off game without\ntheir biggest star headlining? I'll show them!
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}There were a lot of fish in my game.
+
+goto eggman_mocking
+
+[why_so_angry]
+text {"name":"comicsans","weight":400}Why are you so angry?
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text I'm afraid you're mistaken, cat. I'm not angry at all! In fact, I am absolutely\ndelighted!
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}That's good.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text For me! Not for you!
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}What?
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text I heard through the grapevine that a certain group of people are creating a\nspin-off game featuring the most beloved character in the franchise.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Oh, I know that.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text ... w-what?! How do you already know that {"weight":700}I{default} am getting another magnificent\ntitle?!
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}You? Who wants to play that?
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text You have no imagination! Just think about it. I, the magnificent Dr. Eggman,\nthe best character in the franchise. How excited were people when given\nthe chance to play as me in "Sonic Adventure 2?"
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Umm¶¶¶¶.¶¶¶¶.¶¶¶¶.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text The answer is very. Compare that to how excited they were to control you.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Everyone loves to fish.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text And what about my solo game? Sure, I looked a little¶¶¶¶.¶¶¶¶.¶¶¶¶. ¶¶¶¶odd¶¶¶¶.¶¶¶¶.¶¶¶¶. ¶¶¶¶in it... but\n"Mean Bean Machine" was a smash hit!
+
+mug eggman STARTDIRRIGHT TODIRLEFT
+config time:250
+text I do need to visit the office, though. My game is supposed to come out\ntomorrow, and I haven't heard a word from the development team about it...
+
+text If it's not up to snuff, someone will pay dearly...
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}That's weird. Your game comes out the same day as mine.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x606080 0x606080
+
+config time:250
+mug eggman START50PERCENT TOVISIBLE STARTDIRLEFT TODIRRIGHT
+text ¶¶¶¶.¶¶¶¶.¶¶¶¶.¶¶¶¶what?
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Yeah. Your game isn't about fishing, is it?
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text But¶¶¶¶.¶¶¶¶.¶¶¶¶.¶¶¶¶ hold on, let me check my Twitter¶¶¶¶.¶¶¶¶.¶¶¶¶.
+
+text ARGH! I told Orbot and Cubot to double check my sources! When was the\nlast time IGN's Dreamcast page was updated?
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}What's wrong?
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text Nothing, just that the longest running inside joke is ruining my chance to be\nadored by the masses¶¶¶¶.¶¶¶¶.¶¶¶¶.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}You can always fish with me.
+
+goto eggman_mocking
+
+[eggman_mocking]
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text ¶¶¶¶.¶¶¶¶.¶¶¶¶.¶¶¶¶ wait a minute! I thought you had retired years ago!
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}I don't remember that. I helped Sonic run in his last game, anyway.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text Nothing but a glorified cameo! Just admit it. You're washed up, Big, and this\ngame will prove it... if it actually comes out at all, that is! Hohoho!
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}I've been working hard on it.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text Oh really? What have you gotten done?
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}I've done a lot of power napping.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text ¶¶¶¶.¶¶¶¶.¶¶¶¶.¶¶¶¶ that doesn't sound promising.
+
+text Well, your failure will just lead to my success! Maybe I can even syphon some\nof your budget! How much were you given?
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug eggman STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Five dollars.
+
+// EGGMAN Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext DR. EGGMAN
+mug big STARTVISIBLE TO50PERCENT
+mug eggman START50PERCENT TOVISIBLE
+setcolor 0x606080 0x606080
+
+config time:250
+text ¶¶¶¶¶¶¶¶.¶¶¶¶¶¶¶¶.¶¶¶¶¶¶¶¶.¶¶¶¶¶¶¶¶ that's the going rate for funding these days? I can make more selling old\nSonic comics I have in my base!
+
+mug eggman STARTDIRRIGHT TODIRLEFT
+text Oh well, time to put my plan into action. I hope you'll understand if I don't\ninvite you along, seeing as how I need to cancel your game. Can't have two\nproducts competing for shelf space at the same time! 
+
+// NARRATOR Text
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+
+config time:250
+mug eggman STARTVISIBLE TOINVISIBLE STARTINRIGHT TOINRIGHT STARTDIRLEFT TODIRLEFT
+text ** Dr. Eggman vanishes, the sound of some transporter ringing in the air.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Isn't everything digital now? Hm.¶¶¶¶.¶¶¶¶.¶¶¶¶ this doesn't sound good.\n
+
+choice text {"name":"comicsans","weight":400}I need to find Froggy so he can help me. Maybe he went back home.\n{"setpos":360}► "I should use the transport gizmo..."\n{"setpos":360}► "Wait, is that a space plane?"
+choice 0 teleport 0 1 0 0
+choice 1 space_plane 0 1 1 1
+
+[teleport]
+text {"name":"comicsans","weight":400}I should use the transport gizmo...
+
+text {"name":"comicsans","weight":400}... but how am I supposed to get to the transport gizmo room? This place is like\na maze¶¶¶¶.¶¶¶¶.¶¶¶¶.
+
+mug big STARTDIRLEFT TODIRRIGHT
+text {"name":"comicsans","weight":400}Hopefully I don't get lost¶¶¶¶.¶¶¶¶.¶¶¶¶.
+
+text
+
+mugtext
+mug big STARTVISIBLE TOINVISIBLE STARTINLEFT TOOUTLEFT STARTDIRRIGHT TODIRRIGHT
+
+close
+music lost_colony stop volume 0.5
+
+fg 0x000000 1 250
+
+scene reset smsBios
+
+[space_plane]
+text {"name":"comicsans","weight":400}Wait, is that a space plane?
+
+text {"name":"comicsans","weight":400}I've always wanted to try one of those. But how am I supposed to get over\nthere?
+
+text
+
+// NARRATOR Text
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+bg ark_eternalengine1 0 250
+bg ark_eternalengine2 1 250
+
+config time:250
+text ** With an intense swing of his fishing rod, Big somehow causes one of the\nwindows in the Space Colony ARK to fly off, allowing the heaving cat to\ngracefully float into the abyss.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Gotta hold my breath!
+
+text
+
+mugtext
+mug big STARTVISIBLE TOINVISIBLE STARTINLEFT TOCENTER STARTDIRLEFT TODIRRIGHT
+
+close
+music lost_colony stop volume 0.5
+
+fg 0x000000 1 250
+
+scene reset flappyBig

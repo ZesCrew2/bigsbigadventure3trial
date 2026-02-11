@@ -1,0 +1,1059 @@
+﻿[init]
+config time:250 textSpeed:0.5 textSpeedFast:4
+addmug big
+addmug knuckles
+addmug shadow
+fg 0x000000 1 1
+bg ss_restaurant_outside 1 1
+
+middletext 13:59\nThe city
+
+middletext
+
+fg 0x000000 0
+music something_goofy
+timer 1850
+save knuxShadow
+
+setcolor 0x202020
+setmugtextside LEFT
+
+open
+
+text ** With a stroke of luck that only a being of nine lives could possibly have,\nBig the Cat lands the space shuttle in the middle of the city, completely\nunharmed.
+
+text ** A large crowd gathers around, but Big walks away without giving them a\nsecond look. He is a cat on a mission. Well, two actually.
+
+text
+
+setcolor 0x4830F0
+setmugtextside LEFT
+
+mugtext BIG THE CAT
+mug big STARTINVISIBLE TOVISIBLE STARTOUTLEFT TOINLEFT STARTDIRLEFT TODIRLEFT
+
+text {"name":"comicsans","weight":400}That was a bumpy ride. But I gave it my best try, and made it.
+
+text {"name":"comicsans","weight":400}Now I just need to find Froggy.¶¶¶¶.¶¶¶¶.¶¶¶¶ but.¶¶¶¶.¶¶¶¶.
+
+// NARRATOR Text
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+
+config time:250
+text ** Big's stomach rumbles with a tremendous force.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}... I'm hungry.
+
+text {"name":"comicsans","weight":400}Oh, there's a place right here! I wonder if they have fish sandwiches.
+
+text
+
+mugtext
+mug big STARTVISIBLE TOINVISIBLE STARTINLEFT TOCENTER STARTDIRLEFT TODIRLEFT
+
+close
+
+fg 0x000000 1 250
+timer 250
+
+bg ss_restaurant_outside 0 1
+bg ss_restaurant_inside 1 1
+
+fg 0x000000 0 250
+timer 250
+
+open
+
+mug big STARTINVISIBLE TOVISIBLE STARTOUTLEFT TOINLEFT STARTDIRLEFT TODIRLEFT
+mugtext BIG THE CAT
+
+text {"name":"comicsans","weight":400}Hello!
+
+// NARRATOR Text
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+
+config time:250
+text .¶¶¶¶.¶¶¶¶.¶¶¶¶.¶¶¶¶.¶¶¶¶.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+choice text {"name":"comicsans","weight":400}Uhh...\n{"setpos":360}► "I'm hungry. Do you have any fish?"\n{"setpos":360}► "Have you seen Froggy?"
+
+choice 0 got_any_fish 0 1 0 0
+choice 1 seen_froggy 0 1 1 1
+
+[got_any_fish]
+text {"name":"comicsans","weight":400}I'm hungry. Do you have any fish?
+
+goto burger_shop
+
+[seen_froggy]
+text {"name":"comicsans","weight":400}Have you seen Froggy?
+
+goto burger_shop
+
+[burger_shop]
+// NARRATOR Text
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+
+config time:250
+text .¶¶¶¶.¶¶¶¶.¶¶¶¶.¶¶¶¶.¶¶¶¶.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+mug big STARTDIRLEFT TODIRRIGHT
+text {"name":"comicsans","weight":400}I guess this place isn't ready yet. Hopefully I can go fishing\nsomewhere nearby.
+
+// NARRATOR Text
+text
+
+mugtext
+mug big STARTVISIBLE TOINVISIBLE STARTINLEFT TOOUTLEFT STARTDIRRIGHT TODIRRIGHT
+
+close
+
+fg 0x000000 1 250
+timer 250
+
+bg ss_restaurant_inside 0 1
+bg ss_innercity 1 1
+setcolor 0x202020 0x202020
+
+fg 0x000000 0 250
+timer 250
+
+open
+
+text ** Big leaves the small eatery, and begins his earnest journey, asking up and\ndown the city streets if anyone has seen his pollywog pal, while at the same\ntime hunting for the perfect place to go eat.
+
+text
+
+setcolor 0x4830F0
+
+mug big STARTINVISIBLE TOVISIBLE STARTOUTLEFT TOINLEFT STARTDIRLEFT TODIRLEFT
+mugtext BIG THE CAT
+
+text {"name":"comicsans","weight":400}Why can't I find any seafood? Even the 24-hour sushi places are closed.\nIs anyone supposed to be here?
+
+text
+
+mugtext
+
+setcolor 0xFF2000
+setmugtextside RIGHT
+
+mugtext KNUCKLES THE ECHIDNA
+mug big STARTVISIBLE TO50PERCENT
+mug knuckles STARTINVISIBLE TOVISIBLE STARTOUTRIGHT TOINRIGHT STARTDIRRIGHT TODIRRIGHT
+
+text Hey, Big! Long time, no see!
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug knuckles STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Hello.
+
+// KNUX Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext KNUCKLES THE ECHIDNA
+mug knuckles START50PERCENT TOVISIBLE
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0xFF2000 0xFF2000
+
+config time:250
+text What are you doing out here? I don't think there's a pond for miles around.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug knuckles STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}I'm looking for Froggy.
+
+// KNUX Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext KNUCKLES THE ECHIDNA
+mug knuckles START50PERCENT TOVISIBLE
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0xFF2000 0xFF2000
+
+config time:250
+text Again? You sure seem to lose him a lot.
+
+text
+
+// SHADOW Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext ???
+setcolor 0x800000 0x800000
+
+config time:250
+mug shadow STARTINVISIBLE TOVISIBLE STARTOUTRIGHT TOPARTRIGHT STARTDIRRIGHT TODIRRIGHT
+text Almost as often as you lose the Master Emerald, right?
+
+// KNUX Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext KNUCKLES THE ECHIDNA
+setcolor 0xFF2000 0xFF2000
+
+config time:250
+mug knuckles STARTINRIGHT TOCENTER STARTDIRRIGHT TODIRLEFT
+mug shadow STARTPARTRIGHT TOINRIGHT
+text Wha- Shadow?! Don't question my skills as guardian! 
+
+// SHADOW Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SHADOW THE HEDGEHOG
+mug knuckles STARTVISIBLE TO50PERCENT
+mug shadow START50PERCENT TOVISIBLE
+setcolor 0x800000 0x800000
+
+config time:250
+text By my count, it's been shattered four times, and stolen seven. Not a great\ntrack record for someone whose only job is to sit on an island and stare at a\ngiant rock.
+
+// KNUX Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext KNUCKLES THE ECHIDNA
+mug shadow STARTVISIBLE TO50PERCENT
+mug knuckles START50PERCENT TOVISIBLE
+setcolor 0xFF2000 0xFF2000
+
+config time:250
+text Hey! I've always gotten it back, haven't I?! 
+
+// SHADOW Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SHADOW THE HEDGEHOG
+mug knuckles STARTVISIBLE TO50PERCENT
+mug shadow START50PERCENT TOVISIBLE
+setcolor 0x800000 0x800000
+
+config time:250
+text So far. Isn't it unprotected again? Or are you here because someone stole it\nand another tidal wave is rushing towards us¶¶¶¶.¶¶¶¶.¶¶¶¶.
+
+// KNUX Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext KNUCKLES THE ECHIDNA
+mug shadow STARTVISIBLE TO50PERCENT
+mug knuckles START50PERCENT TOVISIBLE
+setcolor 0xFF2000 0xFF2000
+
+config time:250
+text Enough! What are you even doing here, anyway? Shouldn't you be\nbothering Sonic? That {"weight":700}is{default} your favorite pastime.
+
+// SHADOW Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SHADOW THE HEDGEHOG
+mug knuckles STARTVISIBLE TO50PERCENT
+mug shadow START50PERCENT TOVISIBLE
+setcolor 0x800000 0x800000
+
+config time:250
+text I came here looking for.¶¶¶¶.¶¶¶¶.¶¶¶¶ him.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug shadow STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+mug knuckles STARTDIRLEFT TODIRRIGHT
+text {"name":"comicsans","weight":400}Oh. Hi. Did you find Froggy?
+
+// SHADOW Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SHADOW THE HEDGEHOG
+mug big STARTVISIBLE TO50PERCENT
+mug shadow START50PERCENT TOVISIBLE
+setcolor 0x800000 0x800000
+
+config time:250
+text No. But I heard you were working on a game¶¶¶¶.¶¶¶¶.¶¶¶¶.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug shadow STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Yep. Starring me.
+
+// SHADOW Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SHADOW THE HEDGEHOG
+mug big STARTVISIBLE TO50PERCENT
+mug shadow START50PERCENT TOVISIBLE
+setcolor 0x800000 0x800000
+
+config time:250
+text Why would you want to do that?
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug shadow STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}So I can catch a fish.
+
+// SHADOW Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SHADOW THE HEDGEHOG
+mug big STARTVISIBLE TO50PERCENT
+mug shadow START50PERCENT TOVISIBLE
+setcolor 0x800000 0x800000
+
+config time:250
+text Having your own game isn't all it's cracked up to be. Trust me¶¶¶¶.¶¶¶¶.¶¶¶¶.
+
+// KNUX Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext KNUCKLES THE ECHIDNA
+mug shadow STARTVISIBLE TO50PERCENT
+setcolor 0xFF2000 0xFF2000
+
+config time:250
+mug knuckles START50PERCENT TOVISIBLE STARTDIRRIGHT TODIRLEFT
+text Now, Shadow. Don't say that. My game was pretty great.
+
+// SHADOW Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SHADOW THE HEDGEHOG
+mug knuckles STARTVISIBLE TO50PERCENT
+mug shadow START50PERCENT TOVISIBLE
+setcolor 0x800000 0x800000
+
+config time:250
+text You mean the game that was supposed to star Espio? On a system\nno one bought?
+
+// KNUX Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext KNUCKLES THE ECHIDNA
+mug shadow STARTVISIBLE TO50PERCENT
+mug knuckles START50PERCENT TOVISIBLE
+setcolor 0xFF2000 0xFF2000
+
+config time:250
+text At least my game actually looked like a Sonic game.
+
+// SHADOW Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SHADOW THE HEDGEHOG
+mug knuckles STARTVISIBLE TO50PERCENT
+mug shadow START50PERCENT TOVISIBLE
+setcolor 0x800000 0x800000
+
+config time:250
+text Must have been why it sold a million copies.
+
+text Wait a minute, that was mine.
+
+// KNUX Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext KNUCKLES THE ECHIDNA
+mug shadow STARTVISIBLE TO50PERCENT
+mug knuckles START50PERCENT TOVISIBLE
+setcolor 0xFF2000 0xFF2000
+
+config time:250
+text I had one good ending. Not thirteen!
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug knuckles STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Maybe I should go¶¶¶¶.¶¶¶¶.¶¶¶¶.
+
+// KNUX Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext KNUCKLES THE ECHIDNA
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0xFF2000 0xFF2000
+
+config time:250
+mug knuckles START50PERCENT TOVISIBLE STARTDIRLEFT TODIRRIGHT
+text Wait! Big, maybe you can settle this. Who had the best game between the\ntwo of us?
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug knuckles STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}They were both good.
+
+text
+// SHADOW Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SHADOW THE HEDGEHOG
+mug big STARTVISIBLE TO50PERCENT
+mug shadow START50PERCENT TOVISIBLE
+setcolor 0x800000 0x800000
+
+config time:250
+text Hmph.
+
+// KNUX Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext KNUCKLES THE ECHIDNA
+mug shadow STARTVISIBLE TO50PERCENT
+mug knuckles START50PERCENT TOVISIBLE
+setcolor 0xFF2000 0xFF2000
+
+config time:250
+text You can't get away that easily. You have to choose!
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug knuckles STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+choice text {"name":"comicsans","weight":400}Oh boy...\n{"setpos":360}► "Knuckles' Chaotix"\n{"setpos":360}► "Shadow the Hedgehog"
+choice 0 knuckles_chaotix 0 1 0 0
+choice 1 shadow_the_hedgehog 0 1 1 1
+
+[knuckles_chaotix]
+text {"name":"comicsans","weight":400}"Knuckles' Chaotix."
+
+// KNUX Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext KNUCKLES THE ECHIDNA
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0xFF2000 0xFF2000
+
+config time:250
+mug knuckles START50PERCENT TOVISIBLE STARTDIRRIGHT TODIRLEFT
+text See! I told you. Team Chaotix always comes out on top.
+
+// SHADOW Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SHADOW THE HEDGEHOG
+mug knuckles STARTVISIBLE TO50PERCENT
+mug shadow START50PERCENT TOVISIBLE
+setcolor 0x800000 0x800000
+
+config time:250
+text Must be why they've never invited you over to their office.
+
+// KNUX Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext KNUCKLES THE ECHIDNA
+mug knuckles START50PERCENT TOVISIBLE
+setcolor 0xFF2000 0xFF2000
+
+config time:250
+text I'll make you eat those words!
+
+// NARRATOR Text
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+
+config time:250
+mug shadow STARTINRIGHT TOPARTRIGHT
+mug knuckles STARTCENTER TOINRIGHT
+text ** The pair of Sonic rivals tumble into each other, fighting over a topic that\ndoesn't deserve to be fought over.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug shadow STARTVISIBLE TO50PERCENT
+mug knuckles STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Ok. Bye.
+
+// NARRATOR Text
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+
+config time:250
+mug big STARTDIRLEFT TODIRRIGHT
+text ** Big decides it's best to leave them to it and heads off in search of Froggy.
+
+text
+
+mug big STARTINLEFT TOOUTLEFT
+
+mug shadow START50PERCENT TOINVISIBLE
+mug knuckles START50PERCENT TOINVISIBLE
+close
+
+fg 0x000000 1 250
+timer 1000
+
+bg ss_innercity 0 1
+bg ss_station 1 1
+
+fg 0x000000 0 250
+timer 250
+setcolor 0x4830F0 0x4830F0
+
+open
+
+mug big STARTINVISIBLE TOVISIBLE STARTOUTLEFT TOINLEFT STARTDIRLEFT TODIRLEFT
+mugtext BIG THE CAT
+
+text {"name":"comicsans","weight":400}That was weird. I hope no one fights like that over me.
+
+// KNUX Text
+config time:1
+text
+setmugtextside LEFT
+mugtext KNUCKLES THE ECHIDNA
+setcolor 0xFF2000 0xFF2000
+
+config time:250
+text Hey, Big! Wait up!
+
+mug knuckles STARTINVISIBLE TO50PERCENT STARTOUTLEFT TOINLEFT STARTDIRLEFT TODIRLEFT
+mug big STARTINLEFT TOCENTER STARTDIRLEFT TODIRRIGHT
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Hello.
+
+// KNUX Text
+config time:1
+text
+setmugtextside LEFT
+mugtext KNUCKLES THE ECHIDNA
+mug big STARTVISIBLE TO50PERCENT
+mug knuckles START50PERCENT TOVISIBLE
+setcolor 0xFF2000 0xFF2000
+
+config time:250
+text Sorry about all that. I wanted to tell you before you left, I did see Froggy.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug knuckles STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}You did?
+
+// KNUX Text
+config time:1
+text
+setmugtextside LEFT
+mugtext KNUCKLES THE ECHIDNA
+mug big STARTVISIBLE TO50PERCENT
+mug knuckles START50PERCENT TOVISIBLE
+setcolor 0xFF2000 0xFF2000
+
+config time:250
+text Yeah. They just opened a train line to the Mystic Ruins here,\nand I saw him hop onto it.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug knuckles STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+mug big START50PERCENT TOVISIBLE STARTDIRRIGHT TODIRLEFT
+text {"name":"comicsans","weight":400}Thanks.
+
+// KNUX Text
+config time:1
+text
+setmugtextside LEFT
+mugtext KNUCKLES THE ECHIDNA
+mug big STARTVISIBLE TO50PERCENT
+mug knuckles START50PERCENT TOVISIBLE
+setcolor 0xFF2000 0xFF2000
+
+config time:250
+text No problem. Oh¶¶¶¶.¶¶¶¶.¶¶¶¶.Big. About your game¶¶¶¶.¶¶¶¶.¶¶¶¶.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug knuckles STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+mug big START50PERCENT TOVISIBLE STARTDIRLEFT TODIRRIGHT
+text {"name":"comicsans","weight":400}Yeah?
+
+// KNUX Text
+config time:1
+text
+setmugtextside LEFT
+mugtext KNUCKLES THE ECHIDNA
+mug big STARTVISIBLE TO50PERCENT
+mug knuckles START50PERCENT TOVISIBLE
+setcolor 0xFF2000 0xFF2000
+
+config time:250
+text I know Sonic's philosophy is to go fast, but this isn't Sonic's game, is it?
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug knuckles STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Nope.
+
+// KNUX Text
+config time:1
+text
+setmugtextside LEFT
+mugtext KNUCKLES THE ECHIDNA
+mug big STARTVISIBLE TO50PERCENT
+mug knuckles START50PERCENT TOVISIBLE
+setcolor 0xFF2000 0xFF2000
+
+config time:250
+text There's no harm in delaying it. Heck, if that had happened with mine? Maybe\nI would have gotten a Knuckles Adventure. Imagine treasure hunting all over\nthe planet, finding out the hidden secrets of my ancestors in sunken islands¶¶¶¶.¶¶¶¶.¶¶¶¶.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug knuckles STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+mug big START50PERCENT TOVISIBLE
+text {"name":"comicsans","weight":400}Okay. Gotta go. Froggy needs me.
+
+// NARRATOR Text
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+
+config time:250
+mug big STARTDIRRIGHT TODIRLEFT
+text ** With as much speed as a large cat can muster, Big sprints towards the\nnearest train depot, and boards. His destination? Home.
+
+text
+
+mug big STARTCENTER TOINRIGHT STARTVISIBLE TOINVISIBLE
+mug knuckles START50PERCENT TOINVISIBLE
+
+close
+
+goto end
+
+[shadow_the_hedgehog]
+text {"name":"comicsans","weight":400}"Shadow the Hedgehog."
+
+// SHADOW Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SHADOW THE HEDGEHOG
+mug big STARTVISIBLE TO50PERCENT
+mug shadow START50PERCENT TOVISIBLE
+setcolor 0x800000 0x800000
+
+config time:250
+text Hah. I should have known.
+
+// KNUX Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext KNUCKLES THE ECHIDNA
+mug shadow STARTVISIBLE TO50PERCENT
+setcolor 0xFF2000 0xFF2000
+
+config time:250
+mug knuckles START50PERCENT TOVISIBLE STARTDIRRIGHT TODIRLEFT
+text You've got to be kidding. That doesn't prove anything!
+
+// SHADOW Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext SHADOW THE HEDGEHOG
+mug knuckles STARTVISIBLE TO50PERCENT
+mug shadow START50PERCENT TOVISIBLE
+setcolor 0x800000 0x800000
+
+config time:250
+text No? Then what would?
+
+// KNUX Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext KNUCKLES THE ECHIDNA
+mug knuckles START50PERCENT TOVISIBLE
+setcolor 0xFF2000 0xFF2000
+
+config time:250
+text Come here and I'll show you!
+
+// NARRATOR Text
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+
+config time:250
+mug shadow STARTINRIGHT TOPARTRIGHT
+mug knuckles STARTCENTER TOINRIGHT
+text ** The pair of Sonic rivals tumble into each other, fighting over a topic that\ndoesn't deserve to be fought over.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug shadow STARTVISIBLE TO50PERCENT
+mug knuckles STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Ok. Bye.
+
+// NARRATOR Text
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+
+config time:250
+mug big STARTDIRLEFT TODIRRIGHT
+text ** Big decides it's best to leave them to it and heads off in search of Froggy.
+
+text
+
+mug big STARTINLEFT TOOUTLEFT
+
+mug shadow START50PERCENT TOINVISIBLE
+mug knuckles START50PERCENT TOINVISIBLE
+close
+
+fg 0x000000 1 250
+timer 1000
+
+bg ss_innercity 0 1
+bg ss_station 1 1
+
+fg 0x000000 0 250
+timer 250
+setcolor 0x4830F0 0x4830F0
+
+open
+
+mug big STARTINVISIBLE TOVISIBLE STARTOUTLEFT TOINLEFT STARTDIRLEFT TODIRLEFT
+mugtext BIG THE CAT
+
+text {"name":"comicsans","weight":400}I hope no one fights over me like that.
+
+// SHADOW Text
+config time:1
+text
+setmugtextside LEFT
+mugtext SHADOW THE HEDGEHOG
+setcolor 0x800000 0x800000
+
+config time:250
+text Wait a moment.
+
+mug shadow STARTINVISIBLE TO50PERCENT STARTOUTLEFT TOINLEFT STARTDIRLEFT TODIRLEFT
+mug big STARTINLEFT TOCENTER STARTDIRLEFT TODIRRIGHT
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Hello.
+
+// SHADOW Text
+config time:1
+text
+setmugtextside LEFT
+mugtext SHADOW THE HEDGEHOG
+mug big STARTVISIBLE TO50PERCENT
+mug shadow START50PERCENT TOVISIBLE
+setcolor 0x800000 0x800000
+
+config time:250
+text I wanted to apologize for that display. What we were supposed to talk about\nwasn't ready, so another topic was quickly thrown out that no one\nwas prepared for.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug shadow STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Um. Ok.
+
+// SHADOW Text
+config time:1
+text
+setmugtextside LEFT
+mugtext SHADOW THE HEDGEHOG
+mug big STARTVISIBLE TO50PERCENT
+mug shadow START50PERCENT TOVISIBLE
+setcolor 0x800000 0x800000
+
+config time:250
+text I wanted to tell you... I saw Froggy. He jumped onto a train headed for\nthe Mystic Ruins.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug shadow STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+mug big START50PERCENT TOVISIBLE STARTDIRRIGHT TODIRLEFT
+text {"name":"comicsans","weight":400}I guess he's going home! He gets me so worried.
+
+// KNUX Text
+config time:1
+text
+setmugtextside LEFT
+mugtext SHADOW THE HEDGEHOG
+mug big STARTVISIBLE TO50PERCENT
+mug shadow START50PERCENT TOVISIBLE
+setcolor 0x800000 0x800000
+
+config time:250
+text I know. Big... Before you go.
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug shadow STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+mug big START50PERCENT TOVISIBLE STARTDIRLEFT TODIRRIGHT
+text {"name":"comicsans","weight":400}What?
+
+// KNUX Text
+config time:1
+text
+setmugtextside LEFT
+mugtext SHADOW THE HEDGEHOG
+mug big STARTVISIBLE TO50PERCENT
+mug shadow START50PERCENT TOVISIBLE
+setcolor 0x800000 0x800000
+
+config time:250
+text About before... Just because my story was met with some grief, doesn't mean\nyou shouldn't follow yours. In the end, I wouldn't change a thing...
+
+mug shadow STARTDIRLEFT TODIRRIGHT
+text ... Well, except for Maria dying...
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug shadow STARTVISIBLE TO50PERCENT
+mug big START50PERCENT TOVISIBLE
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Okay. Bye!
+
+// KNUX Text
+config time:1
+text
+setmugtextside LEFT
+mugtext SHADOW THE HEDGEHOG
+mug big STARTVISIBLE TO50PERCENT
+mug shadow START50PERCENT TOVISIBLE
+setcolor 0x800000 0x800000
+
+config time:250
+text Chaos... CONTROL!
+
+// NARRATOR Text
+config time:1
+text
+mugtext
+setcolor 0x202020 0x202020
+
+config time:250
+mug shadow STARTVISIBLE TOINVISIBLE
+mug big STARTDIRRIGHT TODIRLEFT
+
+mug big STARTCENTER TOINRIGHT STARTVISIBLE TOINVISIBLE
+text ** In a flash, Shadow disappears, Big running off to catch the next train.
+
+// KNUX Text
+config time:1
+text
+setmugtextside LEFT
+mugtext SHADOW THE HEDGEHOG
+setcolor 0x800000 0x800000
+
+config time:250
+mug shadow STARTINVISIBLE TOVISIBLE STARTDIRLEFT TODIRLEFT
+text ... Oh, and maybe don't have as many endings in your g-- Huh.\nHe's faster than I thought.
+
+goto end
+
+[end]
+music something_goofy stop volume 0.5
+
+fg 0x000000 1 250
+
+scene reset textEngine trial_mysticruins

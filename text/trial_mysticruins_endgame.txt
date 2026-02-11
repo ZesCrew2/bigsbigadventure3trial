@@ -1,0 +1,152 @@
+﻿[init]
+config time:250 textSpeed:0.5 textSpeedFast:4
+addmug big
+addmug froggy
+fg 0x000000 1 1
+bg mysticruins_bigshouse 1 1
+
+middletext 16:30\nMystic Ruins\nBig's Hut
+
+middletext
+
+fg 0x000000 0
+music mystic_ruins resume 0.5
+save ending
+
+// Open Textbox as BIG
+setcolor 0x4830F0 0x4830F0
+setmugtextside LEFT
+open
+
+// BIG Text
+mugtext BIG THE CAT
+mug big STARTINVISIBLE TOVISIBLE STARTCENTER TOINLEFT STARTDIRLEFT TODIRLEFT
+mug froggy STARTINVISIBLE TOVISIBLE STARTCENTER TOINRIGHT STARTDIRRIGHT TODIRRIGHT
+
+text {"name":"comicsans","weight":400}Froggy! There you are! I was worried, good buddy.
+
+// FROGGY Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext FROGGY
+mug froggy START50PERCENT TOVISIBLE
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x00A000 0x00A000
+
+config time:250
+text !!!
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug froggy STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}I know. I've been worried, too. I don't think we'll have it ready by tomorrow.
+
+// FROGGY Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext FROGGY
+mug froggy START50PERCENT TOVISIBLE
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x00A000 0x00A000
+
+config time:250
+text .¶¶¶¶.¶¶¶¶.¶¶¶¶!
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug froggy STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Huh? You talked to them?
+
+// FROGGY Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext FROGGY
+mug froggy START50PERCENT TOVISIBLE
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x00A000 0x00A000
+
+config time:250
+text !!!
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug froggy STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}They're okay with a delay? That's good. I don't want my game to be like\nthat one from ten years ago.
+
+// FROGGY Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext FROGGY
+mug froggy START50PERCENT TOVISIBLE
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x00A000 0x00A000
+
+config time:250
+text .¶¶¶¶.¶¶¶¶.¶¶¶¶
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug froggy STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}I know. We should get to work right away. But.¶¶¶¶.¶¶¶¶.¶¶¶¶ *yawns* .¶¶¶¶.¶¶¶¶.¶¶¶¶I'm tired.\nOne more nap shouldn't hurt, right?
+
+// FROGGY Text
+config time:1
+text
+setmugtextside RIGHT
+mugtext FROGGY
+mug froggy START50PERCENT TOVISIBLE
+mug big STARTVISIBLE TO50PERCENT
+setcolor 0x00A000 0x00A000
+
+config time:250
+text .¶¶¶¶.¶¶¶¶.¶¶¶¶
+
+// BIG Text
+config time:1
+text
+setmugtextside LEFT
+mugtext BIG THE CAT
+mug big START50PERCENT TOVISIBLE
+mug froggy STARTVISIBLE TO50PERCENT
+setcolor 0x4830F0 0x4830F0
+
+config time:250
+text {"name":"comicsans","weight":400}Yeah¶¶¶¶¶¶¶¶¶¶¶¶.¶¶¶¶¶¶¶¶¶¶¶¶.¶¶¶¶¶¶¶¶¶¶¶¶.¶¶¶¶¶¶¶¶¶¶¶¶ that's¶¶¶¶¶¶¶¶¶¶¶¶.¶¶¶¶¶¶¶¶¶¶¶¶.¶¶¶¶¶¶¶¶¶¶¶¶.¶¶¶¶¶¶¶¶¶¶¶¶ z¶¶¶¶¶¶¶¶¶¶¶¶z¶¶¶¶¶¶¶¶¶¶¶¶z¶¶¶¶¶¶¶¶¶¶¶¶.¶¶¶¶¶¶¶¶¶¶¶¶.¶¶¶¶¶¶¶¶¶¶¶¶.¶¶¶¶¶¶¶¶¶¶¶¶
+
+text
+music mystic_ruins stop volume 5
+fg 0x000000 1 5000
+
+scene reset textEngine trial_credits

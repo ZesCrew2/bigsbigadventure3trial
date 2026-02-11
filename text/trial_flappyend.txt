@@ -1,0 +1,26 @@
+[init]
+config time:250 textSpeed:0.5 textSpeedFast:4
+addmug big
+bg 0x000000 0.5 1000
+
+setcolor 0x4830F0 0x4830F0
+setmugtextside LEFT
+open
+
+// BIG Text
+mugtext BIG THE CAT
+mug big STARTINVISIBLE TOVISIBLE STARTINLEFT TOINLEFT STARTDIRLEFT TODIRLEFT
+
+text {"name":"comicsans","weight":400}That seemed to go on forever... but I made it. Let's go home.
+
+text
+
+mugtext
+mug big STARTVISIBLE TOINVISIBLE STARTINLEFT TOINLEFT STARTDIRLEFT TODIRLEFT
+
+close
+
+music bigflappers
+fg 0x000000 1 250
+
+scene reset textEngine trial_ss_knuxshadow

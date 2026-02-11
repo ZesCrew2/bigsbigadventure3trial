@@ -1,0 +1,3 @@
+var HAPIEnum=function(){};HAPIEnum.prototype={constructor:HAPIEnum,add:function(type,array){if(arguments.length==1&&typeof type=="object"){array=type;var start=0;if(typeof this._full=="undefined"){this._full=[];}else{for(var i in this)if(typeof this[i]=="number")if(this[i]>=start)start=this[i]+1;}
+for(var i=0;i<array.length;i++){if(typeof this[array[i]]!="undefined")continue;this[array[i]]=start+i;this['_full'][start+i]=array[i];}}else{var start=0;if(typeof this[type]=="undefined"){this[type]={_full:[]};}else{for(var i in this[type])if(typeof this[type][i]=="number")if(this[type][i]>=start)start=this[type][i]+1;}
+for(var i=0;i<array.length;i++){if(typeof this[type][array[i]]!="undefined")continue;this[type][array[i]]=start+i;this[type]['_full'][start+i]=array[i];}}}};

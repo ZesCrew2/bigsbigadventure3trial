@@ -1,0 +1,104 @@
+[init]
+config time:250 textSpeed:0.5 textSpeedFast:4
+fg 0x000000 1 1
+bg 0x000000 1 1
+
+fg 0x000000 0 10
+music lazy_days_demo play 1 0.8
+
+middletext settimeout 6000
+middletext {"weight":700,"size":50}Big's Big Fishing Adventure 3 Staff
+
+middletext
+
+middletext {"weight":700,"size":50}Executive Producer\n{default}Big the Cat
+
+middletext
+
+middletext {"weight":700,"size":50}Producer\n{default}Rojo Rico
+
+middletext
+
+middletext {"weight":700,"size":50}Director\n{default}Jonas Winstonson
+
+middletext
+
+middletext {"weight":700,"size":50}Lead Programmers\n{default}Magnus Godfrey\nFroggy
+
+middletext
+
+middletext {"weight":700,"size":50}Music\n{default}La Faye\n{"weight":700}JOGURT{default} - Hugh Baptiste\n{"weight":700}Hyper Potions{default} - Kevin Villecco and Ian Tsuchiura
+
+middletext
+
+middletext {"weight":700,"size":50}Lead Artists\n{default}Wade Sheffield\nSheila Bates
+
+middletext
+
+middletext {"weight":700,"size":50}Scenario Writer\n{default}Jarvis McGuthry
+
+middletext
+
+middletext {"weight":700,"size":50}Scenario Editors\n{default}Bob\nBen Kalough\nSergei Yankovsky
+
+middletext
+
+middletext {"weight":700,"size":50}Public Relations\n{default}Ben Kalough\nChella Love
+
+middletext
+
+middletext {"weight":700,"size":50}Production Assistant\n{default}Andy Bates
+
+middletext
+
+middletext {"weight":700,"size":50}Quality Assurance\n{default}Crow Paco\nMann Heimer\nBoris Locke
+
+middletext
+
+middletext {"weight":700,"size":50}Quality Assurance\n{default}Frankie Cerano\nBen Kent\nMr. Gregorios\nJT Snow
+
+middletext
+
+middletext {"weight":700,"size":50}Best Boy\n{default}Dave the Intern
+
+middletext
+
+middletext {"weight":700,"size":50}Best Girl\n{default}Not your Waifu
+
+middletext
+
+middletext {"weight":700,"size":50}Localization Staff\n{default}Dr. Eggman
+
+middletext
+
+middletext {"weight":700,"size":50}Special Thanks\n{default}Yuji Naka\nTakashi Iizuka
+
+middletext
+
+middletext {"weight":700,"size":50}Special Thanks\n{default}Jun Senoue\nKenichi Tokoi\nFumie Kumatani\nMasafumi Ogata
+
+middletext
+
+middletext {"weight":700,"size":50}Special Thanks\n{default}Jen Pleasure\nAll SoVI staff and their families
+
+middletext
+
+middletext and {"weight":600}YOU!
+
+middletext
+
+middletext {"weight":700,"size":20}In memory of Sega of Antarctica
+
+middletext
+
+bg sovi_credits 1 250
+
+middletext   
+
+bg sovi_credits 0 250
+middletext
+
+music lazy_days_demo stop volume 3
+timer 3000
+
+scene reset textEngine trial_mysticruins_postcredits

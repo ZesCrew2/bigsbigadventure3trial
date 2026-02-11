@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Big's Big Fishing Adventure 3</title>
+<meta name="description" content="Sega of Virgin Islands presents a game of a big cat, his friend frog, and serious deadlines." />
+<meta name="keywords" content="Big,Big Fishing,Adventure,SA3" />
+<meta name="author" content="Sega of Virgin Islands" />
+<link type="text/css" rel="stylesheet" href="css/main.css" />
+<link type="text/css" rel="stylesheet" href="css/fonts.css" />
+<script type="text/javascript" src="js/lib/uncompressed/pixi.blendMode.js"></script>
+<script type="text/javascript" src="js/lib/base64binary.min.js"></script>
+<script type="text/javascript" src="js/HAPIEnum.class.js"></script>
+<script type="text/javascript" src="js/HAPILoader.class.js"></script>
+<script type="text/javascript" src="js/system.js"></script>
+<script type="text/javascript" src="js/obj/loadingSprite.js"></script>
+<script type="text/javascript">
+		var american = true;		loader.loadScripts("system.mp3.def").loadData([{ name : "__load", url : "img/load.png" }], false, function() {
+			for (var i in loader.loadedScripts) if (loader.loadedScripts[i].status == false) return setTimeout(function() { loader.interpretFunc(); }, 100);
+			var overlayBindInterval = setInterval(function(){
+				if (typeof HAPIOverlay == "undefined") return;
+				HAPIOverlay.bind(bg, "0x000000", 0.5); HAPIOverlay.bind(fg, "0x000000", 0);
+				clearInterval(overlayBindInterval);
+				overlayBindInterval = undefined;
+			}, 10);
+			loadingSprite.setImage(PIXI.loader.resources['__load'].texture);
+			loader.manualCleanup();
+		}, function() {
+			var audioLibraryInterval = setInterval(function(){
+				if (typeof HAPIAudioLibrary == "undefined") return;
+				musicLibrary = musicLibrary || new HAPIAudioLibrary();
+				soundLibrary = soundLibrary || new HAPIAudioLibrary();
+				audioContextVolume.gain.value = 0.5;
+				loader.loadScripts(["scenes.def", "objects.def" ]).loadData("data.mp3.def", function(d){
+					if (stage.checkChild(loadingSprite) == false) loadingSprite.show(500, { x : 390, y : 110 }, "0xFFFFFF");
+					loadingSprite.setPercent(d.progress / 100);
+				}, loader.interpretLoadData, function(){
+					fg.set("0x000000", 1, 250);
+					setTimeout(function(){ loadingSprite.hide(); gameSceneChange = "controls"; }, 500);
+				});
+				clearInterval(audioLibraryInterval);
+				audioLibraryInterval = undefined;
+			}, 10);
+		});
+		gameRenderPOST = function() {
+			document.getElementById('fps').innerHTML = parseInt(1000 / frameDelta);
+		};
+	</script>
+</head>
+<body>
+<div id="bg"></div>
+<div onClick="toggleMute()" id="audio"></div>
+<div id="fps" style="display:none"></div>
+</body>
+</html>
